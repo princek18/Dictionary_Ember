@@ -1,7 +1,28 @@
-{{page-title "Experiment"}}
-
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <LinkTo @route='/'><a class="navbar-brand">Experiment</a></LinkTo>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul style="align-items:center;" class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <LinkTo @route='story'><a class="nav-link active" aria-current="page">Story</a></LinkTo>
+        </li>
+        <li class="nav-item">
+          <LinkTo @route='about'><a class="nav-link active">About</a></LinkTo>
+        </li>
+        <LinkTo @route='start'><button class="start" type="button">Get Started</button></LinkTo>
+      </ul>
+      
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
 {{outlet}}
+<footer>
+    &copy;Experiment
+</footer>

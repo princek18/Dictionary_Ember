@@ -1,0 +1,5 @@
+<form onsubmit={{this.search}}>
+    <input class="inpt" type="text" value={{this.word}} oninput={{this.update}} placeholder="Enter any word" required>
+    <button class="search" type="submit">Search</button>
+</form>
+<Display @word={{this.word1}} @description={{this.result}}/>
