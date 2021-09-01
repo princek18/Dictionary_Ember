@@ -1,9 +1,20 @@
-{{!-- <h1>{{@data}}</h1>
+{{!-- {{#if @description}}
+<h1>{{@word}}</h1>
 {{#each @description as |one|}}
-<p>{{one.speech}}</p>
-<p>{{one.definition}}</p>
-<p>{{one.example}}</p>
-{{/each}} --}}
+<div class="each">
+    <p>Parts Of Speech: {{one.speech}}</p>
+    <p>Definition: {{one.definition}}</p>
+    {{#if one.example}}
+    <p>Example: {{one.example}}</p>
+    {{/if}}
+</div>
+{{/each}}
+{{else}}
+<h1>Could not Find!</h1>
+{{/if}} --}}
+
+{{!-- Service part --}}
+
 {{#if this.data.result}}
 <h1>{{this.data.word1}}</h1>
 {{#each this.data.result as |one|}}
